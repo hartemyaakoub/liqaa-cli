@@ -1,0 +1,30 @@
+{
+  "name": "@liqaa/cli",
+  "version": "1.0.0",
+  "description": "Command-line interface for LIQAA Cloud — manage rooms, webhooks, tokens from your terminal.",
+  "keywords": ["liqaa", "cli", "video", "webrtc", "developer-tools", "tkawen", "real-time"],
+  "homepage": "https://liqaa.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hartemyaakoub/liqaa-cli.git"
+  },
+  "bugs": "https://github.com/hartemyaakoub/liqaa-cli/issues",
+  "author": {
+    "name": "Yaakoub HARTEM",
+    "email": "yaakoub.hartem.mhsi@gmail.com",
+    "url": "https://liqaa.io"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "bin": {
+    "liqaa": "./bin/liqaa.mjs"
+  },
+  "files": ["src", "bin", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
