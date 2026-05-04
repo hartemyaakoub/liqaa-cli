@@ -31,8 +31,8 @@ npx @liqaa/cli <command>
 The CLI reads `LIQAA_PK` and `LIQAA_SK` from env, or from `~/.liqaa/config.json`:
 
 ```bash
-liqaa login           # interactive — paste pk/sk, stored in ~/.liqaa/config.json (chmod 600)
-liqaa whoami          # show current account + plan
+liqaa login # interactive — paste pk/sk, stored in ~/.liqaa/config.json (chmod 600)
+liqaa whoami # show current account + plan
 ```
 
 ## Commands
@@ -40,11 +40,11 @@ liqaa whoami          # show current account + plan
 ### Rooms
 
 ```bash
-liqaa rooms list                              # all active conversations
-liqaa rooms create alice@a.com bob@b.com      # create persistent room
-liqaa rooms get conv_2f9aBcDe                 # fetch room state
-liqaa rooms end conv_2f9aBcDe                 # end an active call
-liqaa rooms tail                              # follow new rooms in real-time
+liqaa rooms list # all active conversations
+liqaa rooms create alice@a.com bob@b.com # create persistent room
+liqaa rooms get conv_2f9aBcDe # fetch room state
+liqaa rooms end conv_2f9aBcDe # end an active call
+liqaa rooms tail # follow new rooms in real-time
 ```
 
 ### Tokens
@@ -66,15 +66,15 @@ liqaa webhooks delete 17
 ### Diagnostics
 
 ```bash
-liqaa ping                  # check API + signaling latency from your machine
-liqaa status                # current LIQAA service health
-liqaa logs                  # recent webhook deliveries (tail -f style)
+liqaa ping # check API + signaling latency from your machine
+liqaa status # current LIQAA service health
+liqaa logs # recent webhook deliveries (tail -f style)
 ```
 
 ### Project bootstrap
 
 ```bash
-liqaa init nextjs my-app    # → npx create-next-app + LIQAA wired in
+liqaa init nextjs my-app # → npx create-next-app + LIQAA wired in
 liqaa init react my-app
 liqaa init vanilla my-site
 ```
@@ -82,9 +82,9 @@ liqaa init vanilla my-site
 ## Output formats
 
 ```bash
-liqaa rooms list                  # human-readable table
-liqaa rooms list --json           # raw JSON for piping
-liqaa rooms list --quiet          # IDs only — for scripts
+liqaa rooms list # human-readable table
+liqaa rooms list --json # raw JSON for piping
+liqaa rooms list --quiet # IDs only — for scripts
 liqaa webhooks list | jq '.[].url'
 ```
 
@@ -100,10 +100,10 @@ liqaa completion fish > ~/.config/fish/completions/liqaa.fish
 
 For backend engineers, the terminal is home. With this CLI you can:
 
-- 🔍 **Debug a customer issue** — `liqaa rooms get conv_X` shows you exactly when it started, who joined, when it ended
-- 🚀 **Script bulk operations** — Bash + `--json | jq` covers any one-off
-- 🔁 **Replay webhooks** — `liqaa webhooks deliveries 17 --replay 1234` re-fires a delivery for testing
-- ⚡ **Quick smoke tests** — `liqaa ping` in CI to verify API health before deploys
+- **Debug a customer issue** — `liqaa rooms get conv_X` shows you exactly when it started, who joined, when it ended
+- **Script bulk operations** — Bash + `--json | jq` covers any one-off
+- **Replay webhooks** — `liqaa webhooks deliveries 17 --replay 1234` re-fires a delivery for testing
+- **Quick smoke tests** — `liqaa ping` in CI to verify API health before deploys
 
 ## License
 
